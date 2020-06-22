@@ -834,6 +834,8 @@ try {
 	            HttpMethod.GET, entity, String.class);
   HttpStatus statusCode = response.getStatusCode();
     if (statusCode == HttpStatus.OK) { 
+    	  test.removeAttribute("token");
+			test.removeAttribute("refresh");	
   	  return new ModelAndView("redirect:/test/authentif" );
     } }
 catch(Exception e) {
